@@ -74,7 +74,7 @@ function updateTableHeader() {
     if($('div.tabcont.oncont.box.planned thead th:contains("Ascended")').length == 0) {
         const header_row = $('div.tabcont.oncont.box.planned thead tr')[0];
         appendField(header_row, header_row.children[4], 'th', "Challenge");
-        appendField(header_row, header_row.children[4], 'th', "Carreer");
+        appendField(header_row, header_row.children[4], 'th', "Career");
         appendField(header_row, header_row.children[4], 'th', "MAX %");
         appendField(header_row, header_row.children[4], 'th', "AVG %");
         appendField(header_row, header_row.children[4], 'th', "Ascended");
@@ -84,10 +84,10 @@ function updateTableHeader() {
     }
 }
 
-function updateRaceDetail(row,details,carreer, challenges) {
+function updateRaceDetail(row,details,career,challenges) {
     if($(row).children('td:contains("%")').length == 0) {
         appendField(row, row.children[4], 'td', challenges);
-        appendField(row, row.children[4], 'td', carreer);
+        appendField(row, row.children[4], 'td', career);
         appendField(row, row.children[4], 'td', details.max_grade);
         appendField(row, row.children[4], 'td', details.avg_grade);
         appendField(row, row.children[4], 'td', details.ascended);
